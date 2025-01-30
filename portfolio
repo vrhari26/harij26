@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariharan J - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: black;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            padding: 20px;
+            background: black;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Profile Section */
+        .profile {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+            max-width: 100%;
+            height: auto;
+            animation: fadeOut 2s ease-in-out 5s;
+        }
+
+        .profile h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+            animation: fadeOut 4s ease-in-out 9s;
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            animation: fadeOut 3s ease-in-out 7s;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.2);
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            animation: fadeOut 3s ease-in-out 6s;
+        }
+
+        /* Dark Mode Toggle Button */
+        #darkModeToggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #darkModeToggle:hover {
+            background-color: #0056b3;
+        }
+
+        /* Fade-Out Animation */
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                width: 90%;
+            }
+            .profile h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <section class="profile">
+        <img src="path/to/your/photo.jpg" alt="Hariharan J">
+        <h2>HARIHARAN J</h2>
+        <p>Web Developer | CSS Enthusiast | BE. ECE</p>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am a student of Sri Krishna College of Engineering and Technology, pursuing my degree in <strong>BE. ECE</strong> (Bachelor of Engineering in Electronics and Communication Engineering).</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Portfolio Website:</strong> A personal portfolio showcasing my work.</li>
+            <li><strong>Animated Landing Page:</strong> A landing page with interactive CSS effects.</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: vrhariharan2005@gmail.com</p>
+        <p>Phone: 9345817945</p>
+    </section>
+
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+
+    <script>
+        // ScrollReveal initialization for smooth appearance
+        ScrollReveal().reveal('.profile', { delay: 500, distance: '50px', origin: 'top' });
+        ScrollReveal().reveal('.about', { delay: 500, distance: '50px', origin: 'bottom' });
+        ScrollReveal().reveal('.skills', { delay: 500, distance: '50px', origin: 'right' });
+        ScrollReveal().reveal('.projects', { delay: 500, distance: '50px', origin: 'left' });
+        ScrollReveal().reveal('.contact', { delay: 500, distance: '50px', origin: 'top' });
+
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            const body = document.body;
+            const isDarkMode = body.style.backgroundColor === 'black';
+
+            if (isDarkMode) {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+                toggleButton.style.backgroundColor = '#000';
+                toggleButton.style.color = 'white';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+                toggleButton.style.backgroundColor = '#007BFF';
+                toggleButton.style.color = 'white';
+            }
+        });
+    </script>
+</body>
+</html>
